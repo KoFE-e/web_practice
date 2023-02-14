@@ -1,0 +1,15 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/bootstrap-grid.min';
+
+@import 'base/fonts';
+
+* {
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+
+@import 'blocks/header';
+@import 'blocks/promo';
+@import 'blocks/steps';
+
+

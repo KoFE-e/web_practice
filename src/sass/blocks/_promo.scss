@@ -1,0 +1,71 @@
+.promo {
+    min-height: 765px;
+    background: url('../img/desktop/main/main_bg.webp') center center / cover no-repeat;
+    padding: 122px 120px;
+    &__text {
+        max-width: 890px;
+    }
+    &__header {
+        font-family: 'Aleo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        color: #fff;
+    }
+    &__descr {
+        font-family: 'Aleo';
+        font-style: italic;
+        font-weight: 700;
+        margin-top: 40px;
+        font-size: 20px;
+        color: #fff;
+    }
+    &__planning {
+        margin-top: 45px;
+        width: 892px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        &__input {
+            height: 95px;
+            flex-grow: 2;
+            border: none;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+            padding: 40px;
+            font-family: 'Aleo';
+            font-style: italic;
+            color: #F2785C;
+            font-weight: 400;
+            font-size: 24px;
+            &:hover, &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                color: #F2785C;
+            }
+        }
+        &__btn {
+            position: absolute;
+            right: 18px;
+            top: 18px;
+            width: 228px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0D606F;
+            border: none;
+            box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 500;
+            font-size: 24px;
+            transition: 0.3s all;
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3), 0px 2px 3px rgba(13, 96, 111, 0.3);
+            }
+        }
+    }
+}
