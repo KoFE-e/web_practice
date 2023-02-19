@@ -1,15 +1,37 @@
 @import 'libs/bootstrap-reboot.min';
-@import 'libs/bootstrap-grid.min';
+@import 'libs/slick';
 
 @import 'base/fonts';
 
 * {
     font-family: 'Red Hat Text', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    &_fluid {
+        max-width: 100%;
+    }
+}
+
+.title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 
 @import 'blocks/header';
 @import 'blocks/promo';
 @import 'blocks/steps';
+@import 'blocks/destinations';
+@import 'blocks/stories';
+
+@import 'base/media';
 
 
