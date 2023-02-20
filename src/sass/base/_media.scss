@@ -250,7 +250,7 @@
 
 @media (max-width: 575.98px) {
     .container {
-        max-width: 100%;
+        max-width: 360px;
     }
     .hamburger {
         right: 20px;
@@ -280,7 +280,7 @@
         }
     }
     .steps {
-        padding: 0 5px;
+        padding: 0 10px;
         padding-top: 20px;
         &__wrapper {
             margin-top: 20px;
@@ -312,15 +312,15 @@
         }
     }
     .destinations {
-        padding: 0 5px;
+        padding: 0 10px;
         padding-top: 20px;
         &__slider {
             position: relative;
             margin: 0 auto;
             margin-top: 20px;
-            max-width: 310px;
+            max-width: 320px;
             &__item {
-                width: 310px;
+                width: 320px;
                 height: 210px;
                 &-text {
                     font-size: 20px;
@@ -350,7 +350,7 @@
         min-height: auto;
         padding-top: 20px;
         &__wrapper {
-            padding: 1px 5px 12px 5px;
+            padding: 1px 10px 12px 10px;
         }
         &__subheader {
             font-weight: 700;
@@ -427,10 +427,10 @@
         }
     }
     .slick-next {
-        right: 5px;
+        right: 10px;
     }
     .slick-prev {
-        left: 5px;
+        left: 10px;
     }
     .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
         opacity: 1;
