@@ -2,7 +2,16 @@
     min-height: 765px;
     background: url('../img/desktop/main/main_bg.webp') center center / cover no-repeat;
     padding: 130px 0;
+    position: relative;
+    &__logo {
+        display: none;
+        position: absolute;
+        top: 45px;
+        left: 25px;
+    }
     &__text {
+        position: relative;
+        z-index: 10;
         max-width: 890px;
     }
     &__header {
@@ -28,6 +37,7 @@
         border-radius: 16px;
         flex-direction: row;
         position: relative;
+        z-index: 10;
         &__input {
             height: 95px;
             max-width: 75%;
@@ -69,5 +79,25 @@
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3), 0px 2px 3px rgba(13, 96, 111, 0.3);
             }
         }
+    }
+}
+
+.hamburger {
+    position: absolute;
+    display: none;
+    top: 50px;
+    right: 25px;
+    height: 17px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    span {
+        display: block;
+        width: 26px;
+        border-radius: 50px;
+        height: 3px;
+        background-color: #FFFFFF;
     }
 }

@@ -3,8 +3,9 @@
     background: #FFFFFF;
     min-height: 347px;
     &__wrapper {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3,1fr);
         margin-top: 40px;
     }
     &__item {
@@ -21,6 +22,7 @@
             border-radius: 16px;
         }
         &__text {
+            text-align: center;
             margin-top: 30px;
             font-family: 'Aleo';
             font-style: normal;

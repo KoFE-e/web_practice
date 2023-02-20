@@ -25,6 +25,9 @@
             }
         }
     }
+    &__wrapper {
+        position: relative;
+    }
     &__btn {
         display: flex;
         align-items: center;
@@ -79,6 +82,7 @@
         transition: 0.3s all;
         &:focus, &:active, &:hover {
             outline: none;
+            background-color:  #F2785C;
         }
     }
 
