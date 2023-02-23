@@ -3,25 +3,24 @@ const hamburger = document.querySelector('.hamburger'),
       menuLinks = document.querySelectorAll('.menu_mobile__link'),
       menu = document.querySelector('.menu_mobile'),
       overlay = document.querySelector('.overlay'),
-      loginBtn = document.querySelector('.menu__btn'),
       modalLogin = document.querySelector('.modal_login'),
       modalRegister = document.querySelector('.modal_register')
-      registerLink = document.querySelector('.modal__account__register'),
-      loginLink = document.querySelector('.modal__account__login');
+      registerBtn = document.querySelector('.register__btn'),
+      loginBtns = document.querySelectorAll('.login__btn');
 
-loginLink.addEventListener('click', () => {
-    modalRegister.classList.remove('active');
-    modalLogin.classList.add('active');
+loginBtns.forEach(item => {
+    item.addEventListener('click', () => {
+        if (!overlay.classList.contains('active')) {
+            overlay.classList.add('active');
+        }
+        modalRegister.classList.remove('active');
+        modalLogin.classList.add('active');
+    });
 });
 
-registerLink.addEventListener('click', () => {
+registerBtn.addEventListener('click', () => {
     modalLogin.classList.remove('active');
     modalRegister.classList.add('active');
-});
-
-loginBtn.addEventListener('click', () => {
-    overlay.classList.add('active');
-    modalLogin.classList.add('active');
 });
 
 hamburger.addEventListener('click', () => {
@@ -37,7 +36,9 @@ closeElem.addEventListener('click', () => {
 menuLinks.forEach( item => {
     item.addEventListener('click', () => {
         menu.classList.remove('active');
-        overlay.classList.remove('active');
+        if(!item.classList.contains('login__btn')) {
+            overlay.classList.remove('active');
+        }
     });
 });
 
@@ -83,14 +84,5 @@ $(document).ready(function() {
         } else {
             $('.pageup').fadeOut();
         }
-    });
-    
-    $("a[href*='#']").on("click", function(e){
-        var anchor = $(this);
-        $('html, body').stop().animate({
-          scrollTop: $(anchor.attr('href')).offset().top
-        }, 300);
-        e.preventDefault();
-        return false;
     });
 });
