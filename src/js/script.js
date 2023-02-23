@@ -2,8 +2,27 @@ const hamburger = document.querySelector('.hamburger'),
       closeElem = document.querySelector('.menu_mobile__close'),
       menuLinks = document.querySelectorAll('.menu_mobile__link'),
       menu = document.querySelector('.menu_mobile'),
-      overlay = document.querySelector('.overlay');
+      overlay = document.querySelector('.overlay'),
+      loginBtn = document.querySelector('.menu__btn'),
+      modalLogin = document.querySelector('.modal_login'),
+      modalRegister = document.querySelector('.modal_register')
+      registerLink = document.querySelector('.modal__account__register'),
+      loginLink = document.querySelector('.modal__account__login');
 
+loginLink.addEventListener('click', () => {
+    modalRegister.classList.remove('active');
+    modalLogin.classList.add('active');
+});
+
+registerLink.addEventListener('click', () => {
+    modalLogin.classList.remove('active');
+    modalRegister.classList.add('active');
+});
+
+loginBtn.addEventListener('click', () => {
+    overlay.classList.add('active');
+    modalLogin.classList.add('active');
+});
 
 hamburger.addEventListener('click', () => {
     menu.classList.add('active');
@@ -25,6 +44,14 @@ menuLinks.forEach( item => {
 overlay.addEventListener('click', () => {
     if (menu.classList.contains('active')) {
         menu.classList.remove('active');
+        overlay.classList.remove('active');
+    }
+    if (modalLogin.classList.contains('active')) {
+        modalLogin.classList.remove('active');
+        overlay.classList.remove('active');
+    }
+    if (modalRegister.classList.contains('active')) {
+        modalRegister.classList.remove('active');
         overlay.classList.remove('active');
     }
 });
@@ -62,7 +89,7 @@ $(document).ready(function() {
         var anchor = $(this);
         $('html, body').stop().animate({
           scrollTop: $(anchor.attr('href')).offset().top
-        }, 777);
+        }, 300);
         e.preventDefault();
         return false;
     });
