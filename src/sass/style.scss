@@ -38,6 +38,22 @@
     }
 }
 
+.user_email {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 5px;
+    background-color: rgba(242,120,92);
+    transition: 0.3s all;
+    border-radius: 8px;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 @import 'blocks/header';
 @import 'blocks/promo';
 @import 'blocks/steps';
